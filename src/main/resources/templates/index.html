@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Welcome</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/index.css}"/>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<h1>Welcome</h1>
+<div>
+   <div class="d-flex justify-content-center">
+       <div colspan="2">&nbsp;<a th:href="@{registration_form}" class="btn btn-success">
+           <i class="fa fa-arrow-circle-o-left"> </i>Add new Student</a>
+       </div>
+       <div colspan="2">&nbsp;<a th:href="@{home}" class="btn btn-primary">
+           <i class="fa fa-arrow-circle-o-left"> </i>See Table</a>
+       </div>
+   </div>
+</div>
+</body>
+</html>

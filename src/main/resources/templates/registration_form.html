@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create New Student</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+</head>
+<body>
+<div class="container my-3">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <h2 class="text-center mb-20">Student Registration</h2>
+            <form th:action="@{/save}" th:object="${student}" method="post">
+                <div class="form-row">
+                    <div class="col-md-6 form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" th:field="*{name}">
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label>Department</label>
+                        <select class="form-control" th:field="*{department}">
+                            <option value="">Choose...</option>
+                            <option value="MCA">MCA</option>
+                            <option value="BCA">BCA</option>
+                            <option value="MBA">MBA</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label>Roll No</label>
+                        <input type="text" class="form-control" th:field="*{rollNo}">
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label>Registration No</label>
+                        <input type="text" class="form-control" th:field="*{regNo}">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block mt-3">Save</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

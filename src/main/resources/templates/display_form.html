@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="row h-100 justify-content-center align-items-center">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Roll No</th>
+                <th>Reg No</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td th:text="${student.id}"></td>
+                    <td th:text="${student.name}"></td>
+                    <td th:text="${student.department}"></td>
+                    <td th:text="${student.rollNo}"></td>
+                    <td th:text="${student.regNo}"></td>
+                </tr>
+            <tr>
+                <td colspan="2">&nbsp;<a th:href="@{registration_form}" class="btn btn-success">
+                    <i class="fa fa-arrow-circle-o-left"> </i>Add new Student</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div colspan="2">&nbsp;<a th:href="@{home}" class="btn btn-primary">
+            <i class="fa fa-arrow-circle-o-left"> </i>See Table</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
